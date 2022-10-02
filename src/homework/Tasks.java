@@ -12,9 +12,9 @@ public class Tasks {
         getClientOS(clientOS, clientDeviceYear);
         System.out.println(" ");
         System.out.println("Задача 3.");
-        int DeliveryDistance = 95;
-        int DeliveryDistanceAnswer = getDeliveryDays(DeliveryDistance);
-        System.out.println("Потребуется дней: " + DeliveryDistanceAnswer);
+        int deliveryDistance = 95;
+        int deliveryDistanceAnswer = getDeliveryDays(deliveryDistance);
+        System.out.println("Потребуется дней: " + deliveryDistanceAnswer);
 
     }
     // 1 метод.
@@ -38,17 +38,17 @@ public class Tasks {
         }
     }
     // 3 метод.
-    public static int getDeliveryDays(int DeliveryDistance) {
-        if (DeliveryDistance <= 20) {
+    public static int getDeliveryDays(int deliveryDistance) {
+        if (deliveryDistance <= 20) {
             return 1;
         } else {
-            int AmountDays = (DeliveryDistance - 20);
-            if ((AmountDays % 40 == 0)) {
-                int NewAmountDays = (AmountDays / 40) + 1;
-                return NewAmountDays;
+            int amountDays = (deliveryDistance - 20);
+            if ((amountDays % 40 == 0)) {
+                int newAmountDays = (amountDays / 40) + 1;
+                return newAmountDays;
             } else {
-                int NewAmountDays2 = (AmountDays / 40) + 2;
-                return NewAmountDays2;
+                int newAmountDays2 = (amountDays / 40) + 2;
+                return newAmountDays2;
             }
         }
     }
