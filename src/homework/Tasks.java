@@ -13,7 +13,9 @@ public class Tasks {
         System.out.println(" ");
         System.out.println("Задача 3.");
         int DeliveryDistance = 95;
-        getDeliveryDays(DeliveryDistance);
+        int DeliveryDistanceAnswer = getDeliveryDays(DeliveryDistance);
+        System.out.println("Потребуется дней: " + DeliveryDistanceAnswer);
+
     }
     // 1 метод.
     public static void getLeapYear(int year) {
@@ -36,17 +38,17 @@ public class Tasks {
         }
     }
     // 3 метод.
-    public static void getDeliveryDays(int DeliveryDistance) {
+    public static int getDeliveryDays(int DeliveryDistance) {
         if (DeliveryDistance <= 20) {
-            System.out.println("Потребуется дней: 1");
+            return 1;
         } else {
             int AmountDays = (DeliveryDistance - 20);
             if ((AmountDays % 40 == 0)) {
                 int NewAmountDays = (AmountDays / 40) + 1;
-                System.out.println("Потребуется дней: " + NewAmountDays);
+                return NewAmountDays;
             } else {
                 int NewAmountDays2 = (AmountDays / 40) + 2;
-                System.out.println("Потребуется дней: " + NewAmountDays2);
+                return NewAmountDays2;
             }
         }
     }
